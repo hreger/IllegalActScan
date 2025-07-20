@@ -1,0 +1,36 @@
+{
+  "system_info": {
+    "name": "Advanced Remote Sensing - Illicit Activity Detection",
+    "version": "1.0.0",
+    "deployment_date": "2025-07-21T01:01:18.422233",
+    "author": "Remote Sensing Intelligence Unit"
+  },
+  "model_parameters": {
+    "cnn_input_shape": [
+      16,
+      16,
+      5
+    ],
+    "feature_names": [
+      "mndwi_t1",
+      "nbr_t1",
+      "ndvi_t1",
+      "ndwi_t1",
+      "savi_t1"
+    ],
+    "confidence_threshold": 0.5,
+    "change_sensitivity": 0.15
+  },
+  "operational_settings": {
+    "max_processing_area_km2": 100,
+    "alert_threshold_high": 0.8,
+    "alert_threshold_medium": 0.6,
+    "email_notifications": true,
+    "case_auto_creation": true
+  },
+  "data_sources": {
+    "sentinel2": "https://scihub.copernicus.eu/",
+    "landsat": "https://earthexplorer.usgs.gov/",
+    "roi_boundaries": "field_surveys_gps"
+  }
+}

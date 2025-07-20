@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5ca9f52d42f4b3c6db517056a3100f02 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5ca9f52d42f4b3c6db517056a3100f02" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5ca9f52d42f4b3c6db517056a3100f02 = L.map(
+                "map_5ca9f52d42f4b3c6db517056a3100f02",
+                {
+                    center: [40.0155, -105.2705],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_243be708dea5ed19703d6bfa34ec7ad4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_243be708dea5ed19703d6bfa34ec7ad4.addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+            var tile_layer_826e595d515f9a90a42c89e2a6fba82b = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Satellite",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_826e595d515f9a90a42c89e2a6fba82b.addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+            var circle_marker_02e0b2e43b5522852039a5034d415c24 = L.circleMarker(
+                [40.004495310216726, -105.25503700782649],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.067991501773, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_d0df375faf4ef222437016af81bac0b4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8a4404a92af8b86982575f3854762c56 = $(`<div id="html_8a4404a92af8b86982575f3854762c56" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Illegal Mining Detected</h4>             <p><b>Alert Level:</b> HIGH</p>             <p><b>Confidence:</b> 80.7%</p>             <p><b>Location:</b> 40.0045°N, -105.2550°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_d0df375faf4ef222437016af81bac0b4.setContent(html_8a4404a92af8b86982575f3854762c56);
+            
+        
+
+        circle_marker_02e0b2e43b5522852039a5034d415c24.bindPopup(popup_d0df375faf4ef222437016af81bac0b4)
+        ;
+
+        
+    
+    
+            var circle_marker_67d1cc3aa7f341df6e6c52412b8cbbf6 = L.circleMarker(
+                [40.010816932505534, -105.27752410870848],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.377543479093296, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_6bf82b3554f7118d623b0a2c2b37b10d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d24e55c0c9afeebc754bfd58c1e62805 = $(`<div id="html_d24e55c0c9afeebc754bfd58c1e62805" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Excavation Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 33.8%</p>             <p><b>Location:</b> 40.0108°N, -105.2775°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_6bf82b3554f7118d623b0a2c2b37b10d.setContent(html_d24e55c0c9afeebc754bfd58c1e62805);
+            
+        
+
+        circle_marker_67d1cc3aa7f341df6e6c52412b8cbbf6.bindPopup(popup_6bf82b3554f7118d623b0a2c2b37b10d)
+        ;
+
+        
+    
+    
+            var circle_marker_57b7fb0a2e08274857aafb7b2d58c28c = L.circleMarker(
+                [39.99779539308617, -105.28286565441417],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.230775074167543, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_784f94d0e09dab4bd4f6281ebbfd8bd5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2b9a2679c11e8a9ee184d434aab3c996 = $(`<div id="html_2b9a2679c11e8a9ee184d434aab3c996" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Illegal Mining Detected</h4>             <p><b>Alert Level:</b> MEDIUM</p>             <p><b>Confidence:</b> 72.3%</p>             <p><b>Location:</b> 39.9978°N, -105.2829°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_784f94d0e09dab4bd4f6281ebbfd8bd5.setContent(html_2b9a2679c11e8a9ee184d434aab3c996);
+            
+        
+
+        circle_marker_57b7fb0a2e08274857aafb7b2d58c28c.bindPopup(popup_784f94d0e09dab4bd4f6281ebbfd8bd5)
+        ;
+
+        
+    
+    
+            var circle_marker_4a9f07919b4a214f5c84f6a5131f01a1 = L.circleMarker(
+                [40.00388243731953, -105.28625509421535],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.19212931404732, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_6f66d77352bc68b3f5b51d580483c7e8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_19e5e5f1f3bb6ea5cceada7d6f22e253 = $(`<div id="html_19e5e5f1f3bb6ea5cceada7d6f22e253" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Excavation Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 41.9%</p>             <p><b>Location:</b> 40.0039°N, -105.2863°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_6f66d77352bc68b3f5b51d580483c7e8.setContent(html_19e5e5f1f3bb6ea5cceada7d6f22e253);
+            
+        
+
+        circle_marker_4a9f07919b4a214f5c84f6a5131f01a1.bindPopup(popup_6f66d77352bc68b3f5b51d580483c7e8)
+        ;
+
+        
+    
+    
+            var circle_marker_1fb5abf5078d2526f110351dd7e6da6c = L.circleMarker(
+                [40.015944436532244, -105.2833337874081],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.599096316149161, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_50b1ba372e21c592928db80c7f0cdb0c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4b9f63dc1171a9f4f936291286799b91 = $(`<div id="html_4b9f63dc1171a9f4f936291286799b91" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Excavation Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 56.0%</p>             <p><b>Location:</b> 40.0159°N, -105.2833°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_50b1ba372e21c592928db80c7f0cdb0c.setContent(html_4b9f63dc1171a9f4f936291286799b91);
+            
+        
+
+        circle_marker_1fb5abf5078d2526f110351dd7e6da6c.bindPopup(popup_50b1ba372e21c592928db80c7f0cdb0c)
+        ;
+
+        
+    
+    
+            var circle_marker_1b4f800344aa3db5f28c00b1319d0087 = L.circleMarker(
+                [39.99733951848958, -105.31286911104006],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.964454897410734, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_b9889fee0d9e3b16f7d55deabc416d1e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1987d7d98e41075fa106ad983282a3f0 = $(`<div id="html_1987d7d98e41075fa106ad983282a3f0" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Construction Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 59.6%</p>             <p><b>Location:</b> 39.9973°N, -105.3129°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_b9889fee0d9e3b16f7d55deabc416d1e.setContent(html_1987d7d98e41075fa106ad983282a3f0);
+            
+        
+
+        circle_marker_1b4f800344aa3db5f28c00b1319d0087.bindPopup(popup_b9889fee0d9e3b16f7d55deabc416d1e)
+        ;
+
+        
+    
+    
+            var circle_marker_d8e91a9699c91ef5dfc4dbc5611c7fa2 = L.circleMarker(
+                [39.985973406136914, -105.22589057125859],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.391000757744123, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_64c8561df9dd806995888154aeee9969 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8990148dd841d138be5edea070b78648 = $(`<div id="html_8990148dd841d138be5edea070b78648" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Illegal Mining Detected</h4>             <p><b>Alert Level:</b> HIGH</p>             <p><b>Confidence:</b> 93.9%</p>             <p><b>Location:</b> 39.9860°N, -105.2259°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_64c8561df9dd806995888154aeee9969.setContent(html_8990148dd841d138be5edea070b78648);
+            
+        
+
+        circle_marker_d8e91a9699c91ef5dfc4dbc5611c7fa2.bindPopup(popup_64c8561df9dd806995888154aeee9969)
+        ;
+
+        
+    
+    
+            var circle_marker_014f3fc8076643cb50b5774588ef6769 = L.circleMarker(
+                [40.01794438330445, -105.28596306986277],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.108406803967394, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_365f0c0c572784e459082a25312a5336 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_03ffe66180e457b08f2b079bf60a92ff = $(`<div id="html_03ffe66180e457b08f2b079bf60a92ff" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Construction Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 41.1%</p>             <p><b>Location:</b> 40.0179°N, -105.2860°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_365f0c0c572784e459082a25312a5336.setContent(html_03ffe66180e457b08f2b079bf60a92ff);
+            
+        
+
+        circle_marker_014f3fc8076643cb50b5774588ef6769.bindPopup(popup_365f0c0c572784e459082a25312a5336)
+        ;
+
+        
+    
+    
+            var circle_marker_abad5e24517e41fb259057103a795ae1 = L.circleMarker(
+                [39.9749656076854, -105.23691729165314],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.103780639431392, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_6678bedb87d446558aa0ca4e4fa7492c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a0c34c6822d810792725b4c47b064080 = $(`<div id="html_a0c34c6822d810792725b4c47b064080" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Deforestation Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 31.0%</p>             <p><b>Location:</b> 39.9750°N, -105.2369°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_6678bedb87d446558aa0ca4e4fa7492c.setContent(html_a0c34c6822d810792725b4c47b064080);
+            
+        
+
+        circle_marker_abad5e24517e41fb259057103a795ae1.bindPopup(popup_6678bedb87d446558aa0ca4e4fa7492c)
+        ;
+
+        
+    
+    
+            var circle_marker_821851d94e95c980759fdd579a9cd6a3 = L.circleMarker(
+                [40.003465867755416, -105.21493165446473],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.793248526491062, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_07148d69ff9fe04a00f0fdb7e655595e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_613aade0bf00e7dc232b9239c21009d0 = $(`<div id="html_613aade0bf00e7dc232b9239c21009d0" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Illegal Mining Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 37.9%</p>             <p><b>Location:</b> 40.0035°N, -105.2149°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_07148d69ff9fe04a00f0fdb7e655595e.setContent(html_613aade0bf00e7dc232b9239c21009d0);
+            
+        
+
+        circle_marker_821851d94e95c980759fdd579a9cd6a3.bindPopup(popup_07148d69ff9fe04a00f0fdb7e655595e)
+        ;
+
+        
+    
+    
+            var circle_marker_ddbfb67ea8b59eef3423504d49a86bd1 = L.circleMarker(
+                [40.00813658117313, -105.25923306098478],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.541893949226065, "stroke": true, "weight": 2}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_c4e44b1b1aed3a4cb3875188751f8da3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3a7a89daded3da5ddbff4f60c3a75a6b = $(`<div id="html_3a7a89daded3da5ddbff4f60c3a75a6b" style="width: 100.0%; height: 100.0%;">         <div style="min-width: 200px;">             <h4>🚨 Deforestation Detected</h4>             <p><b>Alert Level:</b> LOW</p>             <p><b>Confidence:</b> 55.4%</p>             <p><b>Location:</b> 40.0081°N, -105.2592°W</p>             <p><b>Detection Time:</b> 2025-07-21 00:59</p>             <hr>             <button style="background:#007cba;color:white;border:none;padding:5px 10px;border-radius:3px;">                 📋 Create Case File             </button>         </div>         </div>`)[0];
+                popup_c4e44b1b1aed3a4cb3875188751f8da3.setContent(html_3a7a89daded3da5ddbff4f60c3a75a6b);
+            
+        
+
+        circle_marker_ddbfb67ea8b59eef3423504d49a86bd1.bindPopup(popup_c4e44b1b1aed3a4cb3875188751f8da3)
+        ;
+
+        
+    
+    
+            var polygon_15075a170f43c6fb64406c4d28e0a185 = L.polygon(
+                [[40.045500000000004, -105.3105], [40.045500000000004, -105.23049999999999], [39.9855, -105.23049999999999], [39.9855, -105.3105]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+        
+    
+        var popup_909226b6617d289b5c2d678aacb56220 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3cd6def486a7c67b056c297fc7f419b = $(`<div id="html_b3cd6def486a7c67b056c297fc7f419b" style="width: 100.0%; height: 100.0%;">Operational Zone Boundary</div>`)[0];
+                popup_909226b6617d289b5c2d678aacb56220.setContent(html_b3cd6def486a7c67b056c297fc7f419b);
+            
+        
+
+        polygon_15075a170f43c6fb64406c4d28e0a185.bindPopup(popup_909226b6617d289b5c2d678aacb56220)
+        ;
+
+        
+    
+    
+            var layer_control_87787fe4d95479290bfa92f321695682_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_243be708dea5ed19703d6bfa34ec7ad4,
+                    "Satellite Imagery" : tile_layer_826e595d515f9a90a42c89e2a6fba82b,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_87787fe4d95479290bfa92f321695682 = L.control.layers(
+                layer_control_87787fe4d95479290bfa92f321695682_layers.base_layers,
+                layer_control_87787fe4d95479290bfa92f321695682_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_5ca9f52d42f4b3c6db517056a3100f02);
+
+        
+    
+            var tile_layer_7c142ae0908ee46123ded9fe3368aa6a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_08a2c28eba28a760aeda5da435e01d9e = new L.Control.MiniMap(
+                tile_layer_7c142ae0908ee46123ded9fe3368aa6a,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_5ca9f52d42f4b3c6db517056a3100f02.addControl(mini_map_08a2c28eba28a760aeda5da435e01d9e);
+        
+</script>
+</html>
